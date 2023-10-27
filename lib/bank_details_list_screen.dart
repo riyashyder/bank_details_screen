@@ -1,6 +1,7 @@
 import 'package:bank_details_screen/bank_details_form_screen.dart';
 import 'package:bank_details_screen/edit_bank_details_form_screen.dart';
 import 'package:bank_details_screen/main.dart';
+import 'package:bank_details_screen/optimized_bank_details.dart';
 import 'package:flutter/material.dart';
 import 'bank_details_model.dart';
 import 'database_helper.dart';
@@ -78,7 +79,7 @@ class _BankDetailsListScreenState extends State<BankDetailsListScreen> {
                       print(_bankDetailsList[index].iFSCCode);
 
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => EditBankDetailsFormScreen(),
+                        builder: (context) => OptimizedBankDetailsScreen(),
                         settings: RouteSettings(
                           arguments: _bankDetailsList[index],
                         ),
